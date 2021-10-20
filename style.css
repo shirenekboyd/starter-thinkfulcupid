@@ -32,7 +32,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -40,6 +40,7 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .item {
@@ -65,6 +66,15 @@ header {
   color: #ecdbc9;
 }
 
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -88,6 +98,11 @@ form {
 
 form label {
   font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
@@ -118,3 +133,24 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .logo {
+    font-size: 42px;
+    margin: 15px 0 15px 20px;
+  }
+
+  header nav ul li {
+    align-items: center;
+  }
+
+  .group {
+    align-items: center;
+    flex-direction: row;
+  }
+}
